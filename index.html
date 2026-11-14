@@ -1,0 +1,275 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>cheetah vinyl · Un disque, une histoire : soul, funk, disco, afro</title>
+<meta name="description" content="Les histoires cachées derrière les tubes soul, funk, disco, boogie et la musique africaine : studios, musiciens, anecdotes vérifiées. Mtume, Chic, Diana…">
+<link rel="canonical" href="https://cheetahvinyl.com/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="cheetah vinyl">
+<meta property="og:title" content="cheetah vinyl · Un disque, une histoire : soul, funk, disco, afro">
+<meta property="og:description" content="Les histoires cachées derrière les tubes soul, funk, disco, boogie et la musique africaine : studios, musiciens, anecdotes vérifiées. Mtume, Chic, Diana…">
+<meta property="og:url" content="https://cheetahvinyl.com/">
+<meta property="og:image" content="https://cheetahvinyl.com/img/og.jpg">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:locale:alternate" content="en_US">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebSite", "name": "cheetah vinyl", "url": "https://cheetahvinyl.com/", "inLanguage": ["fr", "en"], "sameAs": ["https://www.tiktok.com/@cheetah_vinyl", "https://www.instagram.com/cheetah_vinyl/", "https://www.instagram.com/cheetah_vinyl_africa/"]}</script>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="icon" href="img/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700;800&family=DM+Serif+Display:ital@0;1&display=swap">
+<style>
+/* Layout: a record-shop window — green velvet hero with a spinning record, then a crate of story sleeves, then the club. */
+:root{
+  --green:#1c4630; --green-deep:#143424; --cream:#f3e6c8; --ochre:#e3a21a; --rust:#c4502a; --ink:#0f241a;
+  --bg:#f6efdd; --fg:#16281e; --muted:#5b6b5f; --card:#fffaf0; --line:#e3d6b6;
+  --display:"DM Serif Display", Georgia, serif; --body:"Poppins", system-ui, sans-serif;
+}
+:root{color-scheme:light}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--fg);font-family:var(--body);font-size:16px;line-height:1.6}
+.wrap{max-width:1080px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--ochre);outline-offset:3px;border-radius:6px}
+/* hero */
+.hero{background:radial-gradient(circle at 70% 40%, #255a3e 0, var(--green) 38%, var(--green-deep) 100%);color:var(--cream);overflow:hidden}
+.hero .wrap{padding-block:28px 56px;display:grid;grid-template-columns:1.1fr .9fr;gap:32px;align-items:center}
+.top{display:flex;align-items:center;justify-content:space-between;gap:12px;grid-column:1/-1}
+.brand{display:flex;align-items:center;gap:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;font-size:13px}
+.brand img{width:52px;height:52px}
+.lang{display:flex;border:1px solid rgba(243,230,200,.4);border-radius:999px;overflow:hidden}
+.lang button{background:none;border:0;color:var(--cream);font:600 13px var(--body);padding:6px 14px;cursor:pointer}
+.lang button[aria-pressed="true"]{background:var(--ochre);color:var(--ink)}
+.kicker{color:var(--ochre);font-weight:600;letter-spacing:.2em;text-transform:uppercase;font-size:13px}
+h1{font-family:var(--display);font-weight:400;font-size:clamp(40px,7vw,76px);line-height:1.02;margin:12px 0 18px;text-wrap:balance}
+h1 em{color:var(--ochre)}
+.lede{max-width:46ch;opacity:.92;margin:0 0 26px}
+.cta{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:12px 20px;border-radius:999px;font-weight:700;text-decoration:none;font-size:15px}
+.btn.primary{background:var(--ochre);color:var(--ink)}
+.btn.ghost{border:1.5px solid var(--cream);color:var(--cream)}
+.deck{position:relative;aspect-ratio:1;max-width:100%;width:min(420px,100%);justify-self:center}
+.disc{position:absolute;inset:0;border-radius:50%;background:repeating-radial-gradient(circle,#111 0 2px,#1d1d1d 3px 5px);box-shadow:0 30px 60px rgba(0,0,0,.45);animation:spin 6s linear infinite}
+.disc::after{--x:0;content:"";position:absolute;inset:33%;border-radius:50%;background:var(--ochre) center/70% no-repeat;background-image:url(img/logo.png)}
+.sleeve{position:absolute;width:62%;left:-12%;top:18%;transform:rotate(-8deg);border:10px solid var(--cream);box-shadow:0 18px 40px rgba(0,0,0,.5)}
+.sleeve img{display:block;width:100%}
+@keyframes spin{to{transform:rotate(360deg)}}
+@media (prefers-reduced-motion:reduce){.disc{animation:none}}
+/* stats */
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:-28px;position:relative}
+.stat{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px 20px}
+.stat b{display:block;font-family:var(--display);font-weight:400;font-size:34px;color:var(--rust);font-variant-numeric:tabular-nums;line-height:1.1}
+.stat span{color:var(--muted);font-size:14px}
+.asof{color:var(--muted);font-size:12px;margin:8px 0 0}
+/* stories */
+section{padding-block:56px 8px}
+h2{font-family:var(--display);font-weight:400;font-size:clamp(30px,4.5vw,44px);margin:0 0 6px;text-wrap:balance}
+.sub{color:var(--muted);margin:0 0 28px;max-width:60ch}
+.crate{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:20px}
+.story{background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden;display:flex;flex-direction:column;min-width:0}
+.story .art{aspect-ratio:1;background:var(--green);position:relative;max-width:100%}
+.story .art img{width:100%;height:100%;object-fit:cover;display:block}
+.story .art.vinyl{display:grid;place-items:center;background:radial-gradient(circle at 50% 50%,var(--ochre) 0 16%,#151515 17% 100%)}
+.story .art.vinyl span:not(.badge){font-family:var(--display);color:var(--cream);font-size:22px;text-align:center;padding:0 18%;margin-top:62%;line-height:1.1}
+.badge{position:absolute;top:10px;left:10px;background:var(--rust);color:#fff;font-weight:700;font-size:12px;padding:4px 10px;border-radius:999px}
+.story .txt{padding:14px 16px 18px;display:flex;flex-direction:column;gap:4px}
+.story .who{font-weight:700;font-size:15px}
+.story .meta{color:var(--muted);font-size:13px}
+.story .hook{margin-top:6px;font-size:14px}
+/* club */
+.club{background:var(--green);color:var(--cream);border-radius:22px;padding:34px 28px;display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:56px}
+.club h2{color:var(--cream)}
+.club p{opacity:.92;margin:0 0 12px}
+.links{display:grid;gap:10px;align-content:start}
+.links a{display:flex;justify-content:space-between;align-items:center;background:rgba(243,230,200,.08);border:1px solid rgba(243,230,200,.25);border-radius:12px;padding:14px 16px;text-decoration:none;font-weight:600}
+.links a small{font-weight:400;opacity:.75}
+footer{padding-block:40px;color:var(--muted);font-size:13px;text-align:center}
+.mbar{display:none}
+.swipe{display:none;color:var(--muted);font-size:13px;margin:-16px 0 14px}
+@media (max-width:760px){
+ .hero{position:relative}
+ .hero .wrap{grid-template-columns:1fr;padding-block:18px 40px;position:relative;z-index:1;min-height:88svh;align-content:space-between}
+ .deck{position:absolute;width:96vw;max-width:none;right:-46vw;top:-6svh;opacity:.5;z-index:-1}
+ .sleeve{display:none}
+ h1{font-size:clamp(52px,15vw,72px);margin:18px 0 16px}
+ .lede{font-size:16px}
+ .kicker{font-size:12px}
+ .cta{display:none}
+ .stats{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;margin-top:-22px;gap:12px;padding-bottom:6px;scrollbar-width:none}
+ .stats::-webkit-scrollbar{display:none}
+ .stat{flex:0 0 70%;scroll-snap-align:start}
+ .stat b{font-size:40px}
+ section{padding-block:44px 4px}
+ h2{font-size:38px}
+ .crate{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:14px;padding-bottom:10px;margin-right:calc(-1 * max(16px,env(safe-area-inset-right,0px)));scrollbar-width:none}
+ .crate::-webkit-scrollbar{display:none}
+ .story{flex:0 0 78%;scroll-snap-align:start}
+ .story .who{font-size:18px}
+ .story .hook{font-size:15px}
+ .swipe{display:block}
+ .club{grid-template-columns:1fr;padding:26px 20px}
+ .links a{padding:16px}
+ .mbar{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:20;gap:10px;padding:10px max(16px,env(safe-area-inset-right,0px)) calc(10px + env(safe-area-inset-bottom,0px)) max(16px,env(safe-area-inset-left,0px));background:rgba(20,52,36,.94);backdrop-filter:blur(8px)}
+ .mbar a{flex:1;text-align:center;padding:13px;border-radius:999px;font-weight:700;text-decoration:none}
+ .mbar a:first-child{background:var(--ochre);color:var(--ink)}
+ .mbar a:last-child{border:1.5px solid var(--cream);color:var(--cream)}
+ footer{padding-bottom:110px}
+}
+[data-l]{display:none}
+html:not([lang="en"]) [data-l="fr"],html[lang="en"] [data-l="en"]{display:revert}
+
+.back{display:inline-flex;gap:6px;color:var(--cream);text-decoration:none;font-weight:600;font-size:14px;opacity:.85}
+.st-hero .wrap{display:grid;grid-template-columns:1fr 1fr;gap:36px;align-items:center;padding-block:24px 56px}
+.st-hero .cover{border:12px solid var(--cream);box-shadow:0 24px 50px rgba(0,0,0,.45);transform:rotate(-3deg);max-width:100%}
+.st-hero .cover img{display:block;width:100%}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:6px}
+.chip{border:1.5px solid rgba(243,230,200,.6);border-radius:999px;padding:6px 14px;font-weight:600;font-size:13px}
+.chip.hot{background:var(--rust);border-color:var(--rust);color:#fff}
+.read{max-width:68ch}
+.time{border-left:3px solid var(--ochre);margin:8px 0 0 10px;padding:0}
+.time li{list-style:none;position:relative;padding:0 0 26px 26px}
+.time li::before{content:"";position:absolute;left:-11px;top:4px;width:18px;height:18px;border-radius:50%;background:var(--ochre);border:4px solid var(--bg)}
+.time .when{font-family:var(--display);font-size:22px;color:var(--rust);display:block;line-height:1.2}
+.facts{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.fact{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 18px}
+.fact b{display:block;font-family:var(--display);font-weight:400;font-size:34px;color:var(--rust);line-height:1.1}
+.fact span{color:var(--muted);font-size:14px}
+.credits{display:grid;grid-template-columns:repeat(2,1fr);gap:0 24px;margin:0}
+.credits div{display:flex;justify-content:space-between;gap:12px;border-bottom:1px solid var(--line);padding:12px 0;min-width:0}
+.credits dt{color:var(--muted)} .credits dd{margin:0;font-weight:600;text-align:right}
+.quote{background:var(--green);color:var(--cream);border-radius:20px;padding:26px 24px;font-family:var(--display);font-size:clamp(22px,4vw,30px);line-height:1.25;margin:0 0 16px}
+.src{font-size:13px;color:var(--muted)} .src a{color:var(--muted)}
+.watch{display:flex;flex-wrap:wrap;gap:12px;margin:8px 0 16px}
+.watch a{background:var(--ochre);color:var(--ink);border-radius:999px;padding:13px 20px;font-weight:700;text-decoration:none}
+@media (max-width:760px){.st-hero .wrap{grid-template-columns:1fr;gap:22px;min-height:auto}.st-hero .cover{width:78%;justify-self:center}.facts{grid-template-columns:1fr 1fr}.credits{grid-template-columns:1fr}}
+
+.afpill{display:inline-flex;align-items:center;gap:10px;margin:0 0 18px;padding:8px 16px 8px 8px;border-radius:999px;background:rgba(243,230,200,.12);border:1.5px solid var(--ochre);color:var(--cream);text-decoration:none;font-weight:600;font-size:14px}
+.afpill b{background:var(--rust);color:#fff;border-radius:999px;padding:4px 10px;font-size:11px;letter-spacing:.08em}
+.afband{display:grid;grid-template-columns:1.1fr 1fr;gap:28px;align-items:center;background:var(--green-deep,#123222);color:var(--cream);border-radius:24px;padding:34px;margin:8px 0 56px;overflow:hidden;position:relative}
+.afband .k{color:var(--ochre);font-weight:700;letter-spacing:.14em;font-size:12px;text-transform:uppercase}
+.afband h2{color:var(--cream);margin:.2em 0 .3em;font-size:clamp(34px,6vw,54px)}
+.afband p{opacity:.9;max-width:46ch}
+.afband .btns{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px}
+.afband .btns a{border-radius:999px;padding:13px 20px;font-weight:700;text-decoration:none}
+.afband .btns a.p{background:var(--ochre);color:var(--ink)}.afband .btns a.g{border:1.5px solid var(--cream);color:var(--cream)}
+.afband .fan{position:relative;height:300px}
+.afband .fan img{position:absolute;width:190px;aspect-ratio:1;object-fit:cover;border:8px solid var(--cream);box-shadow:0 18px 36px rgba(0,0,0,.45)}
+.afband .fan img:nth-child(1){left:2%;top:40px;transform:rotate(-12deg)}
+.afband .fan img:nth-child(2){left:22%;top:10px;transform:rotate(-4deg);z-index:2}
+.afband .fan img:nth-child(3){left:42%;top:30px;transform:rotate(5deg);z-index:3}
+.afband .fan img:nth-child(4){left:60%;top:70px;transform:rotate(12deg);z-index:4}
+#africa{scroll-margin-top:20px}
+@media (max-width:760px){.afband{grid-template-columns:1fr;padding:26px 20px;gap:10px}.afband .fan{height:200px;order:-1}.afband .fan img{width:130px;border-width:6px}.afband .fan img:nth-child(4){left:56%}}
+
+.newband{display:grid;grid-template-columns:minmax(220px,340px) 1fr;gap:40px;align-items:center;background:var(--cream);color:var(--green-deep,#123222);border-radius:24px;padding:34px 40px;margin:8px 0 28px;border:2px solid var(--ochre)}
+.newband .k{display:inline-block;background:var(--rust);color:#fff;font-weight:700;letter-spacing:.12em;font-size:12px;text-transform:uppercase;border-radius:999px;padding:6px 14px}
+.newband h2{color:var(--green,#1c4630);margin:.35em 0 .3em;font-size:clamp(32px,4.6vw,52px);line-height:1.05}
+.newband h2 em{color:var(--rust);font-style:italic}
+.newband p{max-width:52ch;font-size:17px}
+.newband .btns{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px}
+.newband .btns a{border-radius:999px;padding:13px 20px;font-weight:700;text-decoration:none}
+.newband .btns a.p{background:var(--green,#1c4630);color:var(--cream)}.newband .btns a.g{border:1.5px solid var(--green,#1c4630);color:var(--green,#1c4630)}
+.nb-cover{display:block;border:10px solid #fff;box-shadow:0 18px 36px rgba(0,0,0,.25);transform:rotate(-3deg)}
+.nb-cover img{display:block;width:100%;aspect-ratio:1;object-fit:cover}
+@media (max-width:760px){.newband{grid-template-columns:1fr;padding:24px 20px;gap:18px}.nb-cover{width:70%;justify-self:center}}
+.story{text-decoration:none;color:inherit}.story:hover{border-color:var(--ochre)}.more{color:var(--rust);font-weight:700;font-size:14px;margin-top:6px}
+</style>
+</head>
+<body>
+<header class="hero">
+ <div class="wrap">
+  <div class="top">
+   <div class="brand"><img src="img/logo.png" alt="Logo cheetah vinyl">cheetah vinyl</div>
+   <div class="lang" role="group" aria-label="Langue / Language">
+    <button id="b-fr" type="button" aria-pressed="true">FR</button><button id="b-en" type="button" aria-pressed="false">EN</button>
+   </div>
+  </div>
+  <div>
+   <a class="afpill" href="#africa"><b><span data-l="fr">NOUVEAU</span><span data-l="en">NEW</span></b><span data-l="fr">Cheetah Africa : 12 histoires →</span><span data-l="en">Cheetah Africa: 12 stories →</span></a><div class="kicker"><span data-l="fr">Soul · Funk · Disco · Boogie · Afro</span><span data-l="en">Soul · Funk · Disco · Boogie · Afro</span></div>
+   <h1><span data-l="fr">Un disque,<br><em>une histoire.</em></span><span data-l="en">You know the song.<br><em>Not the story.</em></span></h1>
+   <p class="lede"><span data-l="fr">Derrière chaque tube que tu as dansé, il y a un studio, une prise de nuit, un bassiste de 17 ans ou un remix fait en cachette. On les raconte, une vidéo à la fois, avec des faits vérifiés.</span><span data-l="en">Behind every hit you danced to there's a studio, a 2 a.m. take, a 17-year-old bassist or a remix done behind someone's back. We tell those stories, one video at a time, with checked facts.</span></p>
+   <div class="cta">
+    <a class="btn primary" href="https://www.tiktok.com/@cheetah_vinyl" target="_blank" rel="noopener">TikTok</a>
+    <a class="btn ghost" href="https://www.instagram.com/cheetah_vinyl/" target="_blank" rel="noopener">Instagram</a>
+   </div>
+  </div>
+  <div class="deck" aria-hidden="true"><div class="disc"></div><div class="sleeve"><img src="img/rus.jpg" alt=""></div></div>
+ </div>
+</header>
+
+<main class="wrap">
+ <div class="stats">
+  <div class="stat"><b>4 000+</b><span data-l="fr">abonnés TikTok en un mois</span><span data-l="en">TikTok followers in one month</span></div>
+  <div class="stat"><b>312 000</b><span data-l="fr">vues pour Get Down Saturday Night</span><span data-l="en">views for Get Down Saturday Night</span></div>
+  <div class="stat"><b>3</b><span data-l="fr">vidéos au-delà de 100 000 vues</span><span data-l="en">videos past 100,000 views</span></div>
+ </div>
+ <p class="asof"><span data-l="fr">Chiffres au 14 novembre 2026. Premier post : 13 octobre 2026.</span><span data-l="en">Figures as of 14 November 2026. First post: 13 October 2026.</span></p>
+
+<section class="newband" aria-labelledby="h-new"><a class="nb-cover" href="imagination-just-an-illusion.html"><img src="img/ima.jpg" alt="Pochette de l’album In the Heat of the Night d’Imagination"></a><div><div class="k"><span data-l="fr">Nouvelle histoire</span><span data-l="en">New story</span></div><h2 id="h-new">Just an Illusion<br><em>Imagination</em></h2><p><span data-l="fr">N°1 en Italie, n°2 au Royaume-Uni… jamais au Hot 100. Puis Mariah Carey l’a samplé.</span><span data-l="en">No. 1 in Italy, UK No. 2… never on the Hot 100. Then Mariah Carey sampled it.</span></p><div class="btns"><a class="p" href="imagination-just-an-illusion.html"><span data-l="fr">Lire l’histoire</span><span data-l="en">Read the story</span></a><a class="g" href="https://www.tiktok.com/@cheetah_vinyl" target="_blank" rel="noopener"><span data-l="fr">Voir la vidéo</span><span data-l="en">Watch the video</span></a></div></div></section>
+ <section class="afband" aria-labelledby="h-afb"><div><div class="k"><span data-l="fr">Nouveau · Musique africaine 1950–1999</span><span data-l="en">New · African music 1950–1999</span></div><h2 id="h-afb">Cheetah Africa</h2><p><span data-l="fr">Makeba, Fela, Manu Dibango, Salif Keïta, Mulatu… Les géants de la musique africaine, un artiste à la fois, avec leur histoire et leurs disques.</span><span data-l="en">Makeba, Fela, Manu Dibango, Salif Keïta, Mulatu… The giants of African music, one artist at a time, with their stories and records.</span></p><div class="btns"><a class="p" href="#africa"><span data-l="fr">Lire les histoires</span><span data-l="en">Read the stories</span></a><a class="g" href="https://www.instagram.com/cheetah_vinyl_africa/" target="_blank" rel="noopener">@cheetah_vinyl_africa</a></div></div><div class="fan" aria-hidden="true"><img src="img/mak.jpg" alt=""><img src="img/fel.jpg" alt=""><img src="img/dib.jpg" alt=""><img src="img/mul.jpg" alt=""></div></section>
+ <section aria-labelledby="h-st">
+  <h2 id="h-st"><span data-l="fr">Les histoires</span><span data-l="en">The stories</span></h2>
+  <p class="sub"><span data-l="fr">Une sélection de disques racontés sur le compte.</span><span data-l="en">A few of the records we've told on the account.</span></p>
+  <p class="swipe"><span data-l="fr">Fais glisser pour voir les autres →</span><span data-l="en">Swipe to see more →</span></p>
+  <div class="crate">
+<a class="story" href="imagination-just-an-illusion.html"><div class="art"><img src="img/ima.jpg" alt="Pochette de l’album In the Heat of the Night d’Imagination" loading="lazy"><span class="badge"><span data-l="fr">NOUVEAU</span><span data-l="en">NEW</span></span></div><div class="txt"><div class="who">Imagination</div><div class="meta">Just an Illusion · 1982</div><p class="hook"><span data-l="fr">N°1 en Italie, n°2 au Royaume-Uni… jamais au Hot 100. Puis Mariah Carey l’a samplé.</span><span data-l="en">No. 1 in Italy, UK No. 2… never on the Hot 100. Then Mariah Carey sampled it.</span></p><span class="more"><span data-l="fr">Lire l’histoire →</span><span data-l="en">Read the story →</span></span></div></a>
+<a class="story" href="nile-rodgers-get-lucky.html"><div class="art"><img src="img/glk.jpg" alt="Pochette du single Get Lucky de Daft Punk" loading="lazy"></div><div class="txt"><div class="who">Nile Rodgers</div><div class="meta">Get Lucky · 2013</div><p class="hook"><span data-l="fr">Le guitariste de Get Lucky a écrit Le Freak, 35 ans plus tôt.</span><span data-l="en">Get Lucky’s guitarist wrote Le Freak, 35 years earlier.</span></p><span class="more"><span data-l="fr">Lire l’histoire →</span><span data-l="en">Read the story →</span></span></div></a>
+<a class="story" href="love-unlimited-loves-theme.html"><div class="art"><img src="img/heat.jpg" alt="Pochette de l’album In Heat de Love Unlimited" loading="lazy"></div><div class="txt"><div class="who">Love Unlimited</div><div class="meta">Love’s Theme (version chantée) · 1974</div><p class="hook"><span data-l="fr">Le n°1 instrumental de Barry White… chanté par son trio.</span><span data-l="en">Barry White’s instrumental No. 1… sung by his trio.</span></p><span class="more"><span data-l="fr">Lire l’histoire →</span><span data-l="en">Read the story →</span></span></div></a>
+<a class="story" href="chic-i-want-your-love.html"><div class="art"><img src="img/chi.jpg" alt="Pochette de l’album C’est Chic" loading="lazy"></div><div class="txt"><div class="who">Chic</div><div class="meta">I Want Your Love · 1978</div><p class="hook"><span data-l="fr">Écrite pour Sister Sledge… qui ont eu « He’s the Greatest Dancer » en échange.</span><span data-l="en">Written for Sister Sledge… who got “He’s the Greatest Dancer” in exchange.</span></p><span class="more"><span data-l="fr">Lire l’histoire →</span><span data-l="en">Read the story →</span></span></div></a>
+<a class="story" href="rick-james-give-it-to-me-baby.html"><div class="art"><img src="img/ric.jpg" alt="Pochette de l’album Street Songs" loading="lazy"></div><div class="txt"><div class="who">Rick James</div><div class="meta">Give It to Me Baby · 1981</div><p class="hook"><span data-l="fr">Teena Marie aux chœurs, 5 semaines n°1 R&amp;B.</span><span data-l="en">Teena Marie on backing vocals, 5 weeks at No. 1 R&amp;B.</span></p><span class="more"><span data-l="fr">Lire l’histoire →</span><span data-l="en">Read the story →</span></span></div></a>
+<a class="story" href="patrice-rushen-forget-me-nots.html"><div class="art"><img src="img/rus.jpg" alt="Pochette de l’album Straight from the Heart" loading="lazy"></div><div class="txt"><div class="who">Patrice Rushen</div><div class="meta">Forget Me Nots · 1982</div><p class="hook"><span data-l="fr">Qui joue quoi : batterie, basse, piano et voix, un instrument à la fois.</span><span data-l="en">Who plays what: drums, bass, piano and vocals, one instrument at a time.</span></p><span class="more"><span data-l="fr">Lire l’histoire →</span><span data-l="en">Read the story →</span></span></div></a>
+<a class="story" href="cheryl-lynn-got-to-be-real.html"><div class="art"><img src="img/chl.jpg" alt="Pochette de l’album Cheryl Lynn" loading="lazy"></div><div class="txt"><div class="who">Cheryl Lynn</div><div class="meta">Got to Be Real · 1978</div><p class="hook"><span data-l="fr">Découverte au Gong Show, un télé-crochet, deux ans plus tôt.</span><span data-l="en">Discovered on The Gong Show, a TV talent contest, two years earlier.</span></p><span class="more"><span data-l="fr">Lire l’histoire →</span><span data-l="en">Read the story →</span></span></div></a>
+<a class="story" href="diana-ross-upside-down.html"><div class="art"><img src="img/dia.jpg" alt="Pochette de l’album Diana" loading="lazy"></div><div class="txt"><div class="who">Diana Ross</div><div class="meta">Upside Down · 1980</div><p class="hook"><span data-l="fr">Écrite par Chic, remixée par Diana sans leur accord.</span><span data-l="en">Written by Chic, remixed by Diana without their approval.</span></p><span class="more"><span data-l="fr">Lire l’histoire →</span><span data-l="en">Read the story →</span></span></div></a>
+<a class="story" href="sugarhill-gang-rappers-delight.html"><div class="art"><img src="img/sug.jpg" alt="Étiquette du maxi original Rapper’s Delight" loading="lazy"></div><div class="txt"><div class="who">The Sugarhill Gang</div><div class="meta">Rapper’s Delight · 1979</div><p class="hook"><span data-l="fr">Enregistrée en une seule prise, avec un bassiste de 17 ans payé 70 dollars.</span><span data-l="en">Recorded in one take, with a 17-year-old bassist paid $70.</span></p><span class="more"><span data-l="fr">Lire l’histoire →</span><span data-l="en">Read the story →</span></span></div></a>
+<a class="story" href="womack-womack-teardrops.html"><div class="art"><img src="img/wom.jpg" alt="Pochette de l’album Conscience de Womack &amp; Womack" loading="lazy"><span class="badge">103K</span></div><div class="txt"><div class="who">Womack &amp; Womack</div><div class="meta">Teardrops · 1988</div><p class="hook"><span data-l="fr">N°2 en Suisse, n°1 aux Pays-Bas… et jamais classée aux États-Unis.</span><span data-l="en">No. 2 in Switzerland, No. 1 in the Netherlands… and never charted in the US.</span></p><span class="more"><span data-l="fr">Lire l’histoire →</span><span data-l="en">Read the story →</span></span></div></a>
+<a class="story" href="mtume-juicy-fruit.html"><div class="art"><img src="img/mtu.jpg" alt="Pochette de l’album Juicy Fruit de Mtume" loading="lazy"><span class="badge">109K</span></div><div class="txt"><div class="who">Mtume</div><div class="meta">Juicy Fruit · 1983</div><p class="hook"><span data-l="fr">Bouclée vers 2 h du matin, 8 semaines n°1 R&amp;B, puis la base de « Juicy » de Biggie.</span><span data-l="en">Finished around 2 a.m., 8 weeks at No. 1 R&amp;B, then the base of Biggie’s “Juicy”.</span></p><span class="more"><span data-l="fr">Lire l’histoire →</span><span data-l="en">Read the story →</span></span></div></a>
+<a class="story" href="oliver-cheatham-get-down-saturday-night.html"><div class="art"><img src="img/che.jpg" alt="Pochette de l’album Saturday Night d’Oliver Cheatham" loading="lazy"><span class="badge">312K</span></div><div class="txt"><div class="who">Oliver Cheatham</div><div class="meta">Get Down Saturday Night · 1983</div><p class="hook"><span data-l="fr">N°37 R&amp;B aux États-Unis… puis GTA: Vice City et un n°1 anglais vingt ans plus tard.</span><span data-l="en">No. 37 R&amp;B in the US… then GTA: Vice City and a UK No. 1 twenty years later.</span></p><span class="more"><span data-l="fr">Lire l’histoire →</span><span data-l="en">Read the story →</span></span></div></a>
+</div>
+ </section>
+ <section id="africa" aria-labelledby="h-af"><h2 id="h-af">Cheetah Africa</h2><p class="read"><span data-l="fr">La musique africaine de 1950 à 1999, un artiste à la fois. Chaque histoire est un Reel numéroté sur @cheetah_vinyl_africa.</span><span data-l="en">African music from 1950 to 1999, one artist at a time. Each story is a numbered Reel on @cheetah_vinyl_africa.</span></p><p class="swipe"><span data-l="fr">Fais glisser pour voir les autres →</span><span data-l="en">Swipe to see more →</span></p><div class="crate">
+<a class="story" href="africa-001-miriam-makeba.html"><div class="art"><img src="img/mak.jpg" alt="Pochette de l’album Pata Pata de Miriam Makeba" loading="lazy"><span class="badge">Nº 001</span></div><div class="txt"><div class="who">Miriam Makeba</div><div class="meta">Pata Pata · 1967</div><p class="hook"><span data-l="fr">Interdite de retour chez elle pendant 31 ans. On l’appelait Mama Africa.</span><span data-l="en">Barred from going home for 31 years. They called her Mama Africa.</span></p><span class="more"><span data-l="fr">Lire l’histoire →</span><span data-l="en">Read the story →</span></span></div></a>
+<a class="story" href="africa-002-fela-kuti.html"><div class="art"><img src="img/fel.jpg" alt="Pochette de l’album Zombie de Fela Kuti et Afrika 70" loading="lazy"><span class="badge">Nº 002</span></div><div class="txt"><div class="who">Fela Kuti</div><div class="meta">Zombie · 1977</div><p class="hook"><span data-l="fr">Un album contre les militaires. La réponse : environ mille soldats chez lui.</span><span data-l="en">An album against the military. The answer: about a thousand soldiers at his door.</span></p><span class="more"><span data-l="fr">Lire l’histoire →</span><span data-l="en">Read the story →</span></span></div></a>
+<a class="story" href="africa-003-manu-dibango.html"><div class="art"><img src="img/dib.jpg" alt="Pochette de Soul Makossa de Manu Dibango" loading="lazy"><span class="badge">Nº 003</span></div><div class="txt"><div class="who">Manu Dibango</div><div class="meta">Soul Makossa · 1972</div><p class="hook"><span data-l="fr">Une face B d’un hymne de foot… reprise par Michael Jackson dans Thriller.</span><span data-l="en">The B-side of a football anthem… borrowed by Michael Jackson on Thriller.</span></p><span class="more"><span data-l="fr">Lire l’histoire →</span><span data-l="en">Read the story →</span></span></div></a>
+<a class="story" href="africa-004-salif-keita.html"><div class="art"><img src="img/sal.jpg" alt="Pochette de l’album Soro de Salif Keïta" loading="lazy"><span class="badge">Nº 004</span></div><div class="txt"><div class="who">Salif Keïta</div><div class="meta">Soro · 1987</div><p class="hook"><span data-l="fr">Descendant de l’empereur du Mali, rejeté pour son albinisme. Il devient « la voix d’or de l’Afrique ».</span><span data-l="en">A descendant of Mali’s founding emperor, rejected for his albinism. He became “the golden voice of Africa”.</span></p><span class="more"><span data-l="fr">Lire l’histoire →</span><span data-l="en">Read the story →</span></span></div></a>
+<a class="story" href="africa-005-grand-kalle.html"><div class="art"><img src="img/kal.jpg" alt="Pochette de la compilation Merveilles du passé 1958-1960 de Grand Kallé et l’African Jazz" loading="lazy"><span class="badge">Nº 005</span></div><div class="txt"><div class="who">Le Grand Kallé</div><div class="meta">Indépendance Cha Cha · 1960</div><p class="hook"><span data-l="fr">Une chanson jouée à Bruxelles pendant qu’on négociait l’indépendance du Congo.</span><span data-l="en">A song played in Brussels while Congo’s independence was being negotiated.</span></p><span class="more"><span data-l="fr">Lire l’histoire →</span><span data-l="en">Read the story →</span></span></div></a>
+<a class="story" href="africa-006-hugh-masekela.html"><div class="art"><img src="img/mas.jpg" alt="Pochette de l’album The Promise of a Future de Hugh Masekela" loading="lazy"><span class="badge">Nº 006</span></div><div class="txt"><div class="who">Hugh Masekela</div><div class="meta">Grazing in the Grass · 1968</div><p class="hook"><span data-l="fr">Sa trompette lui venait de Louis Armstrong. Son tube s’est vendu à 4 millions.</span><span data-l="en">His trumpet came from Louis Armstrong. His hit sold 4 million.</span></p><span class="more"><span data-l="fr">Lire l’histoire →</span><span data-l="en">Read the story →</span></span></div></a>
+<a class="story" href="africa-007-mory-kante.html"><div class="art"><img src="img/mor.jpg" alt="Pochette de l’album N’Diarabi de Mory Kanté" loading="lazy"><span class="badge">Nº 007</span></div><div class="txt"><div class="who">Mory Kanté</div><div class="meta">Yé ké yé ké · 1987</div><p class="hook"><span data-l="fr">Le premier single africain à dépasser le million d’exemplaires.</span><span data-l="en">The first African single to sell over a million copies.</span></p><span class="more"><span data-l="fr">Lire l’histoire →</span><span data-l="en">Read the story →</span></span></div></a>
+<a class="story" href="africa-008-cesaria-evora.html"><div class="art"><img src="img/ces.jpg" alt="Pochette de l’album Miss Perfumado de Cesária Évora" loading="lazy"><span class="badge">Nº 008</span></div><div class="txt"><div class="who">Cesária Évora</div><div class="meta">Miss Perfumado · 1992</div><p class="hook"><span data-l="fr">Elle chantait pieds nus dans les bars de Mindelo. Le monde l’a découverte à 47 ans.</span><span data-l="en">She sang barefoot in the bars of Mindelo. The world discovered her at 47.</span></p><span class="more"><span data-l="fr">Lire l’histoire →</span><span data-l="en">Read the story →</span></span></div></a>
+<a class="story" href="africa-009-youssou-ndour.html"><div class="art"><img src="img/you.jpg" alt="Pochette de l’album The Guide (Wommat) de Youssou N’Dour" loading="lazy"><span class="badge">Nº 009</span></div><div class="txt"><div class="who">Youssou N’Dour</div><div class="meta">7 Seconds · 1994</div><p class="hook"><span data-l="fr">Chanteur à 16 ans dans un club de Dakar. Ministre à 52 ans.</span><span data-l="en">A club singer in Dakar at 16. A government minister at 52.</span></p><span class="more"><span data-l="fr">Lire l’histoire →</span><span data-l="en">Read the story →</span></span></div></a>
+<a class="story" href="africa-010-angelique-kidjo.html"><div class="art"><img src="img/ang.jpg" alt="Pochette de l’album Logozo d’Angélique Kidjo" loading="lazy"><span class="badge">Nº 010</span></div><div class="txt"><div class="who">Angélique Kidjo</div><div class="meta">Agolo · 1994</div><p class="hook"><span data-l="fr">Partie du Bénin en 1983. Cinq Grammys plus tard.</span><span data-l="en">She left Benin in 1983. Five Grammys later.</span></p><span class="more"><span data-l="fr">Lire l’histoire →</span><span data-l="en">Read the story →</span></span></div></a>
+<a class="story" href="africa-011-mulatu-astatke.html"><div class="art"><img src="img/mul.jpg" alt="Pochette d’Éthiopiques Vol. 4, Mulatu Astatke" loading="lazy"><span class="badge">Nº 011</span></div><div class="txt"><div class="who">Mulatu Astatke</div><div class="meta">Éthiopiques Vol. 4 · 1969–1974</div><p class="hook"><span data-l="fr">Premier étudiant africain de Berklee. Il invente l’éthio-jazz.</span><span data-l="en">Berklee’s first African student. He invented Ethio-jazz.</span></p><span class="more"><span data-l="fr">Lire l’histoire →</span><span data-l="en">Read the story →</span></span></div></a>
+<a class="story" href="africa-012-khaled.html"><div class="art"><img src="img/khl.jpg" alt="Pochette de l’album Khaled (1992)" loading="lazy"><span class="badge">Nº 012</span></div><div class="txt"><div class="who">Khaled</div><div class="meta">Didi · 1992</div><p class="hook"><span data-l="fr">Trop libre pour la radio, il chantait dans les mariages. Il est devenu le roi du raï.</span><span data-l="en">Too free for the radio, he sang at weddings. He became the King of Raï.</span></p><span class="more"><span data-l="fr">Lire l’histoire →</span><span data-l="en">Read the story →</span></span></div></a>
+</div><div class="watch"><a href="https://www.instagram.com/cheetah_vinyl_africa/" target="_blank" rel="noopener"><span data-l="fr">Suivre @cheetah_vinyl_africa</span><span data-l="en">Follow @cheetah_vinyl_africa</span></a></div></section>
+
+
+ <section class="club" aria-labelledby="h-club">
+  <div>
+   <h2 id="h-club">The Cheetah Club</h2>
+   <p><span data-l="fr">C'est le nom de la communauté qui commente, corrige, raconte ses souvenirs de piste et propose les prochains disques. Beaucoup de sujets viennent de vous.</span><span data-l="en">That's the community that comments, corrects us, shares dance-floor memories and suggests the next records. Many of our stories come from you.</span></p>
+   <p><span data-l="fr">Côté Afrique, le compte @cheetah_vinyl_africa raconte les géants du continent : Mory Kanté, Angélique Kidjo, Mulatu Astatke…</span><span data-l="en">For Africa, @cheetah_vinyl_africa tells the stories of the continent's greats: Mory Kanté, Angélique Kidjo, Mulatu Astatke…</span></p>
+  </div>
+  <div class="links">
+   <a href="https://www.tiktok.com/@cheetah_vinyl" target="_blank" rel="noopener">TikTok <small>@cheetah_vinyl</small></a>
+   <a href="https://www.instagram.com/cheetah_vinyl/" target="_blank" rel="noopener">Instagram <small>@cheetah_vinyl</small></a>
+   <a href="https://www.facebook.com/Cheetah.Vinyl" target="_blank" rel="noopener">Facebook <small>Cheetah.Vinyl</small></a>
+   <a href="https://www.instagram.com/cheetah_vinyl_africa/" target="_blank" rel="noopener">Instagram Africa <small>@cheetah_vinyl_africa</small></a>
+  </div>
+ </section>
+</main>
+<nav class="mbar" aria-label="Suivre"><a href="https://www.tiktok.com/@cheetah_vinyl" target="_blank" rel="noopener">TikTok</a><a href="https://www.instagram.com/cheetah_vinyl/" target="_blank" rel="noopener">Instagram</a></nav>
+<footer class="wrap"><span data-l="fr">cheetah vinyl · Un disque, une histoire · Pochettes et extraits appartiennent à leurs ayants droit.</span><span data-l="en">cheetah vinyl · One record, one story · Sleeves and clips belong to their rights holders.</span></footer>
+<script>
+(function(){
+ var root=document.documentElement;
+ function set(l){root.lang=l;document.getElementById('b-fr').setAttribute('aria-pressed',l==='fr');document.getElementById('b-en').setAttribute('aria-pressed',l==='en');try{localStorage.setItem('cv-lang',l)}catch(e){}}
+ var saved=null;try{saved=localStorage.getItem('cv-lang')}catch(e){}
+ set(saved||((navigator.language||'fr').slice(0,2)==='fr'?'fr':'en'));
+ document.getElementById('b-fr').onclick=function(){set('fr')};document.getElementById('b-en').onclick=function(){set('en')};
+})();
+</script>
+
+<script data-goatcounter="https://cheetahvinyl.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
+</body>
+</html>
