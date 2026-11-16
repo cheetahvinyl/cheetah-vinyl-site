@@ -65,7 +65,7 @@ CSS = '''
 JS = '''<script>(function(){var b=document.querySelectorAll('.nwfilt button');b.forEach(function(x){x.addEventListener('click',function(){b.forEach(function(y){y.setAttribute('aria-pressed',y===x)});var c=x.dataset.c;document.querySelectorAll('.nw').forEach(function(a){a.style.display=(c==='all'||a.dataset.cat===c)?'':'none'})})})})();</script>'''
 
 def page_body(items, LANG):
-    return (f'<header class="hero st-hero nwhero"><div class="wrap"><div class="top"><a class="back" href="index.html">← cheetah vinyl</a>{LANG}</div>'
+    return (f'<header class="hero st-hero nwhero"><div class="wrap"><div class="top"><a class="back" href="/">← cheetah vinyl</a>{LANG}</div>'
             f'<div><div class="kicker">{L("Mis à jour chaque jour", "Updated daily")}</div><h1>News</h1>'
             f'<p class="read">{L("L’actualité de la musique africaine, de la soul, du funk et du disco : rééditions, hommages, anniversaires, documentaires. Chaque info est résumée par nos soins et renvoie à sa source.", "News on African music, soul, funk and disco: reissues, tributes, anniversaries, documentaries. Every item is summarised by us and links to its source.")}</p></div></div></header><main class="wrap">'
             f'<div class="nwfilt" role="group" aria-label="Filtre"><button type="button" data-c="all" aria-pressed="true">{L("Tout", "All")}</button>'
