@@ -1,0 +1,25 @@
+name: IndexNow
+on:
+  push:
+    branches: [main]
+    paths: ['sitemap.xml']
+  workflow_dispatch:
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Attendre la mise en ligne GitHub Pages
+        run: sleep 90
+      - name: Envoyer les URL du sitemap à IndexNow (Bing, Yandex, Seznam, Naver…)
+        run: |
+          python3 - <<'PY'
+          import re,json,urllib.request
+          urls=re.findall(r'<loc>([^<]+)</loc>',open('sitemap.xml').read())
+          body=json.dumps({"host":"cheetahvinyl.com","key":"535c8ce750144a6e91dbba8259f48cd2","keyLocation":"https://cheetahvinyl.com/535c8ce750144a6e91dbba8259f48cd2.txt","urlList":urls[:10000]}).encode()
+          r=urllib.request.Request("https://api.indexnow.org/indexnow",data=body,headers={"Content-Type":"application/json; charset=utf-8"})
+          try:
+              print(urllib.request.urlopen(r,timeout=30).status,len(urls),"URL envoyées")
+          except Exception as e:
+              print("IndexNow:",e)
+          PY
