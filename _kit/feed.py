@@ -14,7 +14,7 @@ for sec in ("histoires","africa"):
         who=strip(re.search(r'<div class="who">(.*?)</div>',body,re.S).group(1))
         meta=re.search(r'<div class="meta">(.*?)</div>',body,re.S); meta=fr(meta.group(1)) if meta else ""
         hook=re.search(r'<p class="hook">(.*?)</p>',body,re.S); hook=fr(hook.group(1)) if hook else ""
-        img=re.search(r'<img src="([^"]+)"',body)
+        img=re.search(r'<img [^>]*?src="([^"]+)"',body)
         d=subprocess.run(["git","log","--diff-filter=A","--format=%cI","--",href],capture_output=True,text=True).stdout.strip().splitlines()
         dt=datetime.datetime.fromisoformat(d[-1]) if d else datetime.datetime.now(datetime.timezone.utc)
         items.append((dt,href,f"{who} – {meta.split(' · ')[0]}",hook,img.group(1) if img else None,"Cheetah Africa" if sec=="africa" else "Histoires"))

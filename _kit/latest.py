@@ -5,7 +5,7 @@ import re,os
 ROOT=os.path.dirname(os.path.dirname(os.path.abspath(__file__)))+"/"
 s=open(ROOT+"index.html",encoding="utf-8").read()
 sec=s[s.index('id="histoires"'):]
-c=re.search(r'<a class="story" href="([^"]+)"><div class="art"><img src="([^"]+)" alt="([^"]*)".*?<div class="who">(.*?)</div><div class="meta">(.*?) · (\d{4})</div><p class="hook">(.*?)</p>',sec,re.S)
+c=re.search(r'<a class="story" href="([^"]+)"><div class="art"><img [^>]*?src="([^"]+)" alt="([^"]*)".*?<div class="who">(.*?)</div><div class="meta">(.*?) · (\d{4})</div><p class="hook">(.*?)</p>',sec,re.S)
 href,img,alt,who,song,year,hook=c.groups()
 page=open(ROOT+href,encoding="utf-8").read()
 v=re.search(r'<div class="watch"><a href="([^"]+)"',page)
@@ -22,7 +22,7 @@ print("Nouvelle histoire :",who,"–",song,year)
 # --- Dernière histoire Cheetah Africa (première carte numérotée de #africa), juste après le bandeau précédent
 s=open(ROOT+"index.html",encoding="utf-8").read()
 sec=s[s.index('id="africa"'):]
-c=re.search(r'<a class="story[^"]*" href="([^"]+)"><div class="art"><img src="([^"]+)" alt="([^"]*)"[^>]*><span class="badge">(Nº \d+)</span></div><div class="txt"><div class="who">(.*?)</div><div class="meta">(.*?) · (\d{4})</div><p class="hook">(.*?)</p>',sec,re.S)
+c=re.search(r'<a class="story[^"]*" href="([^"]+)"><div class="art"><img [^>]*?src="([^"]+)" alt="([^"]*)"[^>]*><span class="badge">(Nº \d+)</span></div><div class="txt"><div class="who">(.*?)</div><div class="meta">(.*?) · (\d{4})</div><p class="hook">(.*?)</p>',sec,re.S)
 href,img,alt,num,who,song,year,hook=c.groups()
 page=open(ROOT+href,encoding="utf-8").read()
 v=re.search(r'<div class="watch"><a href="([^"]+)"',page)
