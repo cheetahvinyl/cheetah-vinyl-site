@@ -30,3 +30,7 @@ out.append('</channel></rss>'); open("feed.xml","w",encoding="utf-8").write("\n"
 tag='<link rel="alternate" type="application/rss+xml" title="cheetah vinyl" href="https://cheetahvinyl.com/feed.xml">'
 if tag not in s: s=s.replace("</head>",tag+"\n</head>",1); open("index.html","w",encoding="utf-8").write(s)
 print("feed.xml :",len(items),"histoires")
+
+# met à jour la recherche du site (search.json)
+import subprocess as _sp, os as _os
+_sp.run(["python3", _os.path.join(_os.path.dirname(_os.path.abspath(__file__)), "search.py")])
