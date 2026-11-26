@@ -1,13 +1,15 @@
 <!doctype html>
 <html lang="fr">
 <head>
-<!-- Google tag (GTM-KQ9FGWBH) -->
-<script async src="https://www.googletagmanager.com/gtm.js?id=GTM-KQ9FGWBH"></script>
+<!-- Google tag (GTM-KQ9FGWBH) + consent mode -->
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
+  gtag('consent','default',{ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied',analytics_storage:'denied',wait_for_update:500});
+  try{if(localStorage.getItem('cv_consent')==='granted')gtag('consent','update',{analytics_storage:'granted'});}catch(e){}
   gtag('js', new Date());
 </script>
+<script async src="https://www.googletagmanager.com/gtm.js?id=GTM-KQ9FGWBH"></script>
 <meta charset="utf-8"><style>/*imgfix*/img{height:auto}</style>
 <meta name="referrer" content="strict-origin-when-cross-origin">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
@@ -261,5 +263,8 @@ html:not([lang="en"]) [data-l="fr"],html[lang="en"] [data-l="en"]{display:revert
 <script async src="https://talk.hyvor.com/embed/embed.js" type="module"></script>
 <script id="ht-init">(function(){var c=document.querySelector("hyvor-talk-comments");if(!c)return;c.setAttribute("page-language",document.documentElement.lang==="en"?"en":"fr");function go(){if(c.load)c.load();else setTimeout(go,200)}if("IntersectionObserver" in window){var o=new IntersectionObserver(function(e){if(e[0].isIntersecting){o.disconnect();go()}},{rootMargin:"400px"});o.observe(c)}else go();})();</script>
 <script data-goatcounter="https://cheetahvinyl.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
+<!--CONSENT--><style>#cvc{position:fixed;left:12px;right:12px;bottom:92px;z-index:9999;max-width:560px;margin:0 auto;background:#163c28;color:#f3e6c8;border:2px solid #e3a21a;border-radius:20px;padding:16px 18px;font:500 15px/1.45 Poppins,system-ui,sans-serif;box-shadow:0 10px 30px rgba(0,0,0,.35)}#cvc p{margin:0 0 12px}#cvc .b{display:flex;gap:10px;flex-wrap:wrap}#cvc button{flex:1;min-width:120px;border-radius:999px;padding:10px 14px;font:700 15px Poppins,system-ui,sans-serif;cursor:pointer;border:2px solid #f3e6c8}#cvc .y{background:#e3a21a;color:#1a3a28;border-color:#e3a21a}#cvc .n{background:transparent;color:#f3e6c8}</style>
+<div id="cvc" role="dialog" aria-live="polite" aria-label="Cookies" hidden><p><span data-l="fr">On utilise des cookies de mesure d'audience (Google Analytics) pour savoir quelles histoires vous plaisent. Ils ne sont déposés qu'avec votre accord.</span><span data-l="en">We use audience-measurement cookies (Google Analytics) to see which stories you enjoy. They are only set with your consent.</span></p><div class="b"><button class="y" type="button" data-c="granted"><span data-l="fr">Accepter</span><span data-l="en">Accept</span></button><button class="n" type="button" data-c="denied"><span data-l="fr">Refuser</span><span data-l="en">Decline</span></button></div></div>
+<script>(function(){var b=document.getElementById('cvc'),v=null;try{v=localStorage.getItem('cv_consent')}catch(e){}if(!v)b.hidden=false;b.addEventListener('click',function(e){var t=e.target.closest('button');if(!t)return;var c=t.getAttribute('data-c');try{localStorage.setItem('cv_consent',c)}catch(e){}if(c==='granted')gtag('consent','update',{analytics_storage:'granted'});b.hidden=true;});})();</script><!--/CONSENT-->
 </body>
 </html>
