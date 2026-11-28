@@ -3,7 +3,7 @@ Modifier BUY_FR / BUY_EN / PRICE puis relancer : python3 _kit/ebook_page.py"""
 import json, html, re, os
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 BUY_FR = os.environ.get("BUY_FR", "https://payhip.com/b/NVsY0")   # lien Payhip/Gumroad/Stan… édition française
-BUY_EN = os.environ.get("BUY_EN", "#acheter")   # lien édition anglaise
+BUY_EN = os.environ.get("BUY_EN", "https://payhip.com/b/5riD7")   # lien édition anglaise
 PRICE = os.environ.get("PRICE", "9,90 €")
 PRICE_EN = os.environ.get("PRICE_EN", "€9.90")
 PLAYLIST = "https://open.spotify.com/playlist/32g8jIKeafruWyQE1fE4VB"
