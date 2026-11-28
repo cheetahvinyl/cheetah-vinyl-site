@@ -93,7 +93,7 @@ body = f"""<body>
 <div>
 <div class="kicker">{b("Le livre numérique cheetah vinyl","The cheetah vinyl ebook")}</div>
 <h1>{b("Tu connais la chanson. <em>Pas l’histoire.</em>","You know the song. <em>Not the story.</em>")}</h1>
-<p class="read">{b("30 tubes qui vous ont fait danser, racontés comme jamais. De « Daddy Cool » à « Pump Up the Jam », les histoires cachées derrière les disques de boîte des années 70 et 80.","30 hits that made you dance, told like never before. From “Daddy Cool” to “Pump Up the Jam”, the hidden stories behind the dance-floor records of the ’70s and ’80s.")}</p>
+<p class="read">{b("30 tubes qui vous ont fait danser, racontés comme jamais. De « Daddy Cool » à « Pump Up the Jam », les histoires cachées derrière les hits des années 70 et 80.","30 hits that made you dance, told like never before. From “Daddy Cool” to “Pump Up the Jam”, the hidden stories behind the dance-floor records of the ’70s and ’80s.")}</p>
 <div class="ebprice">{b(PRICE,PRICE_EN)}<small>{b("PDF · téléchargement immédiat","PDF · instant download")}</small></div>
 {BTN}
 <div class="ebsafe">{b("Bientôt en vente · le livre arrivera par e-mail juste après l’achat","On sale soon · the book will arrive by email right after purchase") if SOON else b("Paiement sécurisé · le livre arrive par e-mail juste après l’achat","Secure payment · the book arrives by email right after purchase")}</div>
