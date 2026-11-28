@@ -50,6 +50,7 @@ html[lang=en] .ebcov img.fr{display:none} html[lang=en] .ebcov img.en{display:bl
 .ebprice small{font:500 15px Poppins,sans-serif;color:#f3e6c8;opacity:.85;margin-left:8px}
 .ebbtns{display:flex;flex-wrap:wrap;gap:12px;margin:18px 0 10px}
 .ebbtn{display:inline-flex;align-items:center;gap:10px;background:#e3a21a;color:#14301f!important;font:800 17px Poppins,sans-serif;padding:15px 26px;border-radius:999px;text-decoration:none!important;box-shadow:0 6px 0 #a8730c}
+.ebbtn.soon{background:#f3e6c8;box-shadow:none;cursor:default;opacity:.9}
 .ebbtn.alt{background:#f3e6c8;box-shadow:0 6px 0 #b9a77e}
 .ebbtn:hover{transform:translateY(2px);box-shadow:0 4px 0 #a8730c}
 .ebsafe{font:500 13px Poppins,sans-serif;opacity:.8}
@@ -78,8 +79,12 @@ html[lang=en] .ebcov img.fr{display:none} html[lang=en] .ebcov img.en{display:bl
 @media(max-width:760px){.ebgrid{grid-template-columns:1fr;gap:28px}.ebcov{max-width:300px;margin:0 auto}.ebpages{grid-template-columns:repeat(2,1fr)}.ebtoc{columns:1}.ebquiz{grid-template-columns:1fr}.ebprice{font-size:34px}}
 </style>"""
 
-BTN = (f'<div class="ebbtns"><a class="ebbtn" href="{BUY_FR}" data-buy="fr">{b("Acheter le livre","Buy the French edition")} 🇫🇷</a>'
-       f'<a class="ebbtn alt" href="{BUY_EN}" data-buy="en">{b("Édition anglaise","Buy the English edition")} 🇬🇧</a></div>')
+SOON = BUY_FR.startswith("#")
+if SOON:
+    BTN = (f'<div class="ebbtns"><span class="ebbtn soon">{b("Bientôt disponible","Coming soon")} 🐆</span></div>')
+else:
+  BTN = (f'<div class="ebbtns"><a class="ebbtn" href="{BUY_FR}" data-buy="fr">{b("Acheter le livre","Buy the French edition")} 🇫🇷</a>'
+         f'<a class="ebbtn alt" href="{BUY_EN}" data-buy="en">{b("Édition anglaise","Buy the English edition")} 🇬🇧</a></div>')
 
 body = f"""<body>
 <header class="hero st-hero kmhero eb"><div class="wrap"><div class="top"><a class="back" href="/">← cheetah vinyl</a><div class="lang" role="group" aria-label="Langue / Language"><button id="b-fr" type="button" aria-pressed="true">FR</button><button id="b-en" type="button" aria-pressed="false">EN</button></div></div>
@@ -91,7 +96,7 @@ body = f"""<body>
 <p class="read">{b("30 tubes qui vous ont fait danser, racontés comme jamais. De « Daddy Cool » à « Pump Up the Jam », les histoires cachées derrière les disques de boîte des années 70 et 80.","30 hits that made you dance, told like never before. From “Daddy Cool” to “Pump Up the Jam”, the hidden stories behind the dance-floor records of the ’70s and ’80s.")}</p>
 <div class="ebprice">{b(PRICE,PRICE_EN)}<small>{b("PDF · téléchargement immédiat","PDF · instant download")}</small></div>
 {BTN}
-<div class="ebsafe">{b("Paiement sécurisé · le livre arrive par e-mail juste après l’achat","Secure payment · the book arrives by email right after purchase")}</div>
+<div class="ebsafe">{b("Bientôt en vente · le livre arrivera par e-mail juste après l’achat","On sale soon · the book will arrive by email right after purchase") if SOON else b("Paiement sécurisé · le livre arrive par e-mail juste après l’achat","Secure payment · the book arrives by email right after purchase")}</div>
 <ul class="ebchips"><li>{b("108 pages","108 pages")}</li><li>{b("30 histoires vérifiées","30 fact-checked stories")}</li><li>{b("30 photos et illustrations","30 photos & illustrations")}</li><li>{b("Blind test + playlist Spotify","Music quiz + Spotify playlist")}</li><li>{b("Français ou anglais","French or English")}</li></ul>
 </div></div></div></header>
 <main class="wrap km">
