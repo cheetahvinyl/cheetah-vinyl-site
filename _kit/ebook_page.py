@@ -2,7 +2,7 @@
 Modifier BUY_FR / BUY_EN / PRICE puis relancer : python3 _kit/ebook_page.py"""
 import json, html, re, os
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-BUY_FR = os.environ.get("BUY_FR", "#acheter")   # lien Payhip/Gumroad/Stan… édition française
+BUY_FR = os.environ.get("BUY_FR", "https://payhip.com/b/NVsY0")   # lien Payhip/Gumroad/Stan… édition française
 BUY_EN = os.environ.get("BUY_EN", "#acheter")   # lien édition anglaise
 PRICE = os.environ.get("PRICE", "9,90 €")
 PRICE_EN = os.environ.get("PRICE_EN", "€9.90")
@@ -84,7 +84,7 @@ if SOON:
     BTN = (f'<div class="ebbtns"><span class="ebbtn soon">{b("Bientôt disponible","Coming soon")} 🐆</span></div>')
 else:
   BTN = (f'<div class="ebbtns"><a class="ebbtn" href="{BUY_FR}" data-buy="fr">{b("Acheter le livre","Buy the French edition")} 🇫🇷</a>'
-         f'<a class="ebbtn alt" href="{BUY_EN}" data-buy="en">{b("Édition anglaise","Buy the English edition")} 🇬🇧</a></div>')
+         + (f'<span class="ebbtn alt soon">{b("Édition anglaise : bientôt","English edition: coming soon")} 🇬🇧</span></div>' if BUY_EN.startswith("#") else f'<a class="ebbtn alt" href="{BUY_EN}" data-buy="en">{b("Édition anglaise","Buy the English edition")} 🇬🇧</a></div>'))
 
 body = f"""<body>
 <header class="hero st-hero kmhero eb"><div class="wrap"><div class="top"><a class="back" href="/">← cheetah vinyl</a><div class="lang" role="group" aria-label="Langue / Language"><button id="b-fr" type="button" aria-pressed="true">FR</button><button id="b-en" type="button" aria-pressed="false">EN</button></div></div>
