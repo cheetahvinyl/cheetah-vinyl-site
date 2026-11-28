@@ -62,8 +62,17 @@ html[lang=en] .ebcov img.fr{display:none} html[lang=en] .ebcov img.en{display:bl
 .ebteas div{background:#fffaf0;border:2px solid #efe3c4;border-radius:18px;padding:20px}
 .ebteas b{display:block;font:800 13px Poppins,sans-serif;letter-spacing:.12em;text-transform:uppercase;color:#c4502a;margin-bottom:6px}
 .ebteas p{margin:0;font-size:17px}
-.ebpages{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:18px}
-.ebpages img{width:100%;border-radius:8px;box-shadow:0 8px 22px rgba(0,0,0,.18);display:block}
+.ebpages{display:flex;gap:22px;overflow-x:auto;scroll-snap-type:x mandatory;padding:8px 4px 22px;margin-top:18px;-webkit-overflow-scrolling:touch}
+.ebpages figure{flex:0 0 min(560px,86vw);margin:0;scroll-snap-align:center;cursor:zoom-in}
+.ebpages img[data-l=en]{display:none!important}html[lang=en] .ebpages img[data-l=fr]{display:none!important}html[lang=en] .ebpages img[data-l=en]{display:block!important}
+.ebpages figcaption{font:600 14px Poppins,sans-serif;color:#1c4630;margin-top:10px;text-align:center}
+.ebnav{display:flex;gap:10px;justify-content:center;margin-top:4px}
+.ebnav button{border:2px solid #1c4630;background:#fffaf0;color:#1c4630;border-radius:999px;width:48px;height:48px;font:800 20px Poppins,sans-serif;cursor:pointer}
+.eblb{position:fixed;inset:0;background:rgba(10,24,16,.94);z-index:10000;display:none;overflow:auto;-webkit-overflow-scrolling:touch;touch-action:pinch-zoom pan-x pan-y}
+.eblb.on{display:block}
+.eblb img{display:block;width:min(1100px,96vw);height:auto;margin:64px auto 40px;border-radius:6px}
+.eblb button{position:fixed;top:14px;right:14px;background:#e3a21a;color:#14301f;border:0;border-radius:999px;font:800 16px Poppins,sans-serif;padding:12px 18px;cursor:pointer;z-index:2}
+.ebpages img{width:100%;border-radius:8px;box-shadow:0 10px 26px rgba(0,0,0,.22);display:block}
 .ebtoc{columns:2;column-gap:36px;list-style:none;padding:0;margin:18px 0 0}
 .ebtoc li{break-inside:avoid;display:grid;grid-template-columns:46px 1fr;padding:7px 0;border-bottom:1px dotted #cdbf9c;font-family:Poppins,sans-serif;font-size:15px}
 .ebtoc .y{color:#c4502a;font-weight:700;grid-row:span 2}
@@ -76,7 +85,7 @@ html[lang=en] .ebcov img.fr{display:none} html[lang=en] .ebcov img.en{display:bl
 .ebfaq p{margin:.6em 0 0}
 .ebfinal{text-align:center;background:#f3e6c8;border:2px solid #e3a21a;border-radius:24px;padding:34px 24px}
 .ebfinal h2{margin-top:0}
-@media(max-width:760px){.ebgrid{grid-template-columns:1fr;gap:28px}.ebcov{max-width:300px;margin:0 auto}.ebpages{grid-template-columns:repeat(2,1fr)}.ebtoc{columns:1}.ebquiz{grid-template-columns:1fr}.ebprice{font-size:34px}}
+@media(max-width:760px){.ebgrid{grid-template-columns:1fr;gap:28px}.ebcov{max-width:300px;margin:0 auto}.ebtoc{columns:1}.ebquiz{grid-template-columns:1fr}.ebprice{font-size:34px}}
 </style>"""
 
 SOON = BUY_FR.startswith("#")
@@ -113,8 +122,10 @@ body = f"""<body>
 
 <section class="ebsec">
 <h2>{b("Feuillette quelques pages","Flip through a few pages")}</h2>
-<div class="ebpages"><img src="ebook-page-1.jpg" alt="Page du chapitre Daddy Cool" loading="lazy"><img src="ebook-page-2.jpg" alt="Page du chapitre Juicy Fruit" loading="lazy"><img src="ebook-page-3.jpg" alt="Sommaire du livre" loading="lazy"><img src="ebook-page-4.jpg" alt="Page du blind test" loading="lazy"></div>
-<p class="knote">{b("Chaque chapitre : l’histoire, une citation, les dates clés, les crédits et une question de blind test. Aperçu de l’édition française.","Each chapter: the story, a quote, a timeline, the credits and a quiz question. Preview of the French edition.")}</p>
+<div class="ebpages" id="ebpages"><figure data-k="1"><img data-l="fr" src="ebook-page-1.jpg" alt="Le chapitre « Daddy Cool »" loading="lazy" width="1100" height="1558"><img data-l="en" src="ebook-page-en-1.jpg" alt="The “Daddy Cool” chapter" loading="lazy" width="1100" height="1558"><figcaption>{b("Le chapitre « Daddy Cool »","The “Daddy Cool” chapter")}</figcaption></figure><figure data-k="2"><img data-l="fr" src="ebook-page-2.jpg" alt="Le chapitre « Juicy Fruit »" loading="lazy" width="1100" height="1558"><img data-l="en" src="ebook-page-en-2.jpg" alt="The “Juicy Fruit” chapter" loading="lazy" width="1100" height="1558"><figcaption>{b("Le chapitre « Juicy Fruit »","The “Juicy Fruit” chapter")}</figcaption></figure><figure data-k="3"><img data-l="fr" src="ebook-page-3.jpg" alt="Le sommaire" loading="lazy" width="1100" height="1558"><img data-l="en" src="ebook-page-en-3.jpg" alt="The contents" loading="lazy" width="1100" height="1558"><figcaption>{b("Le sommaire","The contents")}</figcaption></figure><figure data-k="4"><img data-l="fr" src="ebook-page-4.jpg" alt="Le blind test" loading="lazy" width="1100" height="1558"><img data-l="en" src="ebook-page-en-4.jpg" alt="The music quiz" loading="lazy" width="1100" height="1558"><figcaption>{b("Le blind test","The music quiz")}</figcaption></figure></div>
+<div class="ebnav"><button type="button" id="ebprev" aria-label="Page précédente">←</button><button type="button" id="ebnext" aria-label="Page suivante">→</button></div>
+<div class="eblb" id="eblb" role="dialog" aria-modal="true"><button type="button" id="eblbx">{b("Fermer ✕","Close ✕")}</button><img id="eblbimg" alt=""></div>
+<p class="knote">{b("Fais glisser pour feuilleter, et touche une page pour la lire en grand.","Swipe to flip through, and tap a page to read it full size.")}</p>
 </section>
 
 <section class="ebsec">
@@ -144,8 +155,14 @@ body = f"""<body>
 </section>
 </main>
 """
+JSX = """<script>(function(){var p=document.getElementById('ebpages'),lb=document.getElementById('eblb'),li=document.getElementById('eblbimg');if(!p)return;
+function step(d){var f=p.querySelector('figure');p.scrollBy({left:d*(f.offsetWidth+22),behavior:'smooth'})}
+document.getElementById('ebprev').onclick=function(){step(-1)};document.getElementById('ebnext').onclick=function(){step(1)};
+p.addEventListener('click',function(e){var im=e.target.closest('img');if(!im)return;li.src=im.currentSrc||im.src;li.alt=im.alt;lb.classList.add('on');lb.scrollTop=0;document.body.style.overflow='hidden'});
+function close(){lb.classList.remove('on');document.body.style.overflow=''}
+document.getElementById('eblbx').onclick=close;lb.addEventListener('click',function(e){if(e.target===lb)close()});document.addEventListener('keydown',function(e){if(e.key==='Escape')close()});})();</script>"""
 LD = '<script type="application/ld+json">' + json.dumps(ld, ensure_ascii=False) + "</script>"
-out = head + CSS + LD + "</head>\n" + body + tail
+out = head + CSS + LD + "</head>\n" + body + JSX + tail
 out = out.replace('<script async src="https://talk.hyvor.com/embed/embed.js" type="module"></script>', "")
 out = re.sub(r'<script id="ht-init">.*?</script>', "", out, flags=re.S)
 open(os.path.join(ROOT, "ebook.html"), "w").write(out)
